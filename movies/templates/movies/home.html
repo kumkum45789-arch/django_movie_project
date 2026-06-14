@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Home</title>
+</head>
+
+<body>
+
+<h1>🎬 Movie Listing Page</h1>
+
+<hr>
+
+<ul>
+    {% for movie in movies %}
+        <li>
+            <b>{{ movie.title }}</b>
+            | ⭐ Rating: {{ movie.rating }}
+            | 🔥 Popularity: {{ movie.popularity }}
+        </li>
+    {% empty %}
+        <li>No movies found</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
